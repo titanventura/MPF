@@ -1,0 +1,31 @@
+{% extends 'finder/index.html' %}
+
+{% block content_main %}
+
+    {% for product in products %}
+    <div class="card" style="display:block;margin:40px;border:2px solid brown;color:white;">
+        
+        <div class="content" style="padding:40px;align-items:center;">
+                <div class="card-img-section">
+                        <img src="{{ product.photo }}" alt="" class="card-top-img" style="width:230px;height:180px;">
+                    </div>
+            
+                    <div class="card-content"  >
+                        
+                        <h1 class="card-title">
+                            {{product.prodbrand}} - {{ product.model }}
+                        </h1>
+            
+                        <h2 class="card-text">
+                            Rating : {{ product.rating }}
+                        </h2>
+                        <p class="card-text">
+                            {{ product.specification }}
+                        </p>
+            
+                    </div>
+        
+        </div>
+    </div>
+    {% endfor %}
+{% endblock content_main %}

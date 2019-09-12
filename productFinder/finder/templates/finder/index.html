@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>MyProductFinder</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+
+
+
+<body style="height:1500px;background-image:linear-gradient(to bottom right,red,yellow);background-repeat:no-repeat;">
+<nav class="navbar navbar-inverse" style="font-size: 14px;">
+
+  <div class="container-fluid">
+
+    <div class="navbar-header">
+      <a class="navbar-brand" href="{% url 'index' %}">MyProductFinder</a>
+    </div>
+
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="{% url 'index' %}">Home</a></li>
+      <li><a href="{% url 'about' %}">About</a></li>
+      <li><a href="{% url 'brandform' %}">New Brand</a></li>
+      <li><a href="{% url 'ProdList' %}">Trending</a></a></li>
+      <li><a href="{% url 'BrandList' %}"> Brands </a></li>
+      <li><a href="{% url 'revform' %}">Reviewers Arena</a></a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+      <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+    </ul>
+
+  </div>
+
+</nav>
+<div >
+  {% block content_main %}
+
+  {% endblock content_main %}
+
+</div>
+
+</body>
+
+</html>

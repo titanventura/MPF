@@ -10,4 +10,5 @@ urlpatterns=[
     path('Brand_Create/',views.branders,name="brandform"),
     path('Prod_List/',views.ProdLsView.as_view(),name="ProdList"),
     path('Brand_list/',views.BrandListView.as_view(),name="BrandList"),
+    path('SignUp/',views.signup,name='signup'),
 ]

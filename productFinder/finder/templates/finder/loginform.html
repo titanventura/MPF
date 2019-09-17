@@ -1,0 +1,18 @@
+{% extends 'finder/index.html' %}
+
+{% load static %}
+
+{% block content_main %}
+
+<link rel="stylesheet" href="{% static 'finder/style.css' %}">
+<div class="login">
+    <h1>Login</h1>
+    <form method="post" action=".">
+        {% csrf_token %}
+        <input type="text" name="username" placeholder="Username" required="required" />
+        <input type="password" name="password" placeholder="Password" required="required" />
+        <input type="email" name="email" placeholder="Email Address" required="required" />
+        <button type="submit" class="btn btn-primary btn-block btn-large">Sign me Up.</button>
+    </form>
+</div>
+{% endblock content_main %}

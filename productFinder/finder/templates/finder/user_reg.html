@@ -1,0 +1,18 @@
+{% extends "finder/index.html" %}
+
+{% load crispy_forms_tags %}
+
+{% block content_main %}
+<div class="container" style="color:white;">
+    <form action="." method="POST">
+        {% csrf_token %}
+
+        {{ form | crispy }}
+
+        <input type="submit" style="color:black;" class="btn btn-outline-success"/> 
+
+    </form>
+</div>
+
+
+{% endblock content_main %}

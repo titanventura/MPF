@@ -7,7 +7,7 @@ class brand(models.Model):
     position        = models.IntegerField(null=True,default=0)
     years           = models.IntegerField()
     description     = models.TextField(max_length=1000)
-    logo            = models.CharField(max_length=1000,null=True)
+    logo            = models.CharField(max_length=100,null=True)
     def __str__(self):
         return self.name + " : position : " + str(self.position)
 
